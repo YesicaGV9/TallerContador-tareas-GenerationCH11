@@ -1,0 +1,110 @@
+/* Estilo del cuerpo, general de la pagina */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #5e548e;
+    text-align: center;
+}
+
+/* el navbar, o barra */
+.navbar {
+    background-color: #9f86c0 !important;
+    font-family: Arial, sans-serif;
+}
+
+.navbar-brand {
+    color: #231942 !important;
+    font-weight: bold;
+}
+
+
+#contenedorPrincipal {
+    background-color: rgba(255, 255, 255, 0.15);
+    width: 700px;
+    margin: 40px auto;
+    padding: 30px;
+    border-radius: 16px;
+    border: 2px solid #231942;
+}
+
+#contenedorContador {
+    background-color: #f1f1f1;
+    padding: 10px;
+    margin: 20px auto;
+    border-radius: 8px;
+    text-align: center;
+    width: 350px;
+}
+
+#completado {
+    color: #e0b1cb;
+    font-weight: bold;
+}
+
+#total {
+    color: #e0b1cb;
+    font-weight: bold;
+}
+
+/*  Titulo dentro de la pagina*/
+#titulopagina {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    color: #231942;
+}
+
+/* input para el usario y el select para categoria */
+input, select {
+    padding: 8px;
+    margin: 5px;
+    border-radius: 6px;
+    border: 1px solid #5e548e;
+}
+
+/* boton para agregar tareas */
+button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 6px;
+    background-color: #9f86c0;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #231942;
+}
+
+
+#error {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #231942;
+}
+
+/* Tarjeta de cada tarea, lista de tareas */
+#lista li {
+    width: 400px;
+    margin: 10px auto;
+
+    background-color: white;
+    border: 2px solid #5e548e;
+    border-radius: 20px;
+
+    padding: 20px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Tareas completas estilo*/
+#lista li.tarea-hecha {
+    text-decoration: line-through;
+    background-color: #84a98c;
+}
+
+/* tareas marcadas/urgentes estilo */
+#lista li.tarea-urgente {
+    border-left: 6px solid #ffc971;
+    background-color: #fff4af;
+}
