@@ -21,7 +21,7 @@ function categoriaConTexto(valor) {
     return categoria[valor] || valor;
 }
 
-// agregar tarea
+
 function agregarTarea() {
     const input = document.getElementById("tareaIngresada");
     const select = document.getElementById("categoria");
@@ -31,10 +31,8 @@ function agregarTarea() {
     let texto = input.value.trim();
     let categoria = select.value;
 
-    console.log("Intentando agregar tarea...");
-
     if (texto === "") {
-        error.textContent = "La tarea no puede estar vacía";
+        error.textContent = "La tarea no puede estar vacia";
         return;
     }
 
@@ -44,7 +42,7 @@ function agregarTarea() {
         categoria = otra.value.trim();
 
         if (categoria === "") {
-            error.textContent = "Escribe una categoría";
+            error.textContent = "Escribe una categoria";
             return;
         }
     }
@@ -105,20 +103,20 @@ function renderizarTareas() {
     document.getElementById("completado").textContent = completadas;
 }
 
-// marcar como hecha
+
 function marcarHecha(index) {
     tareas[index].completada = !tareas[index].completada;
     renderizarTareas();
 }
 
-// marcar urgente
+
 function marcarUrgente(index) {
     console.log("urgente clicked", index);
     tareas[index].urgente = !tareas[index].urgente;
     renderizarTareas();
 }
 
-// eliminar tarea
+
 function eliminarTarea(index) {
     const confirmar = confirm("¿Seguro que deseas eliminar esta tarea?");
 
@@ -128,7 +126,7 @@ function eliminarTarea(index) {
     }
 }
 
-// limpiar completadas (extra)
+
 function limpiarCompletadas() {
     const cantidad = tareas.filter(t => t.completada).length;
 
@@ -142,5 +140,5 @@ function limpiarCompletadas() {
     }
 }
 
-// evento para detectar cambio en select
+
 document.getElementById("categoria").addEventListener("change", usarOtraCategoria);
